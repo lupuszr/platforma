@@ -1,0 +1,24 @@
+{
+  "name": "Platforma+",
+  "version": "0.0.1",
+  "description": "A multi vendor app. Built using the react_on_rails generator.",
+  "main": "server.js",
+  "engines": {
+    "node": "4.2.0",
+    "npm": "3.3.6"
+  },
+  "scripts": {
+    "postinstall": "cd client && npm install",
+    "test": "rspec && (cd client && npm run lint)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shakacode/react-webpack-rails-tutorial.git"
+  },
+  "keywords": [
+    "react",
+    "multivendor"
+  ],
+  "author": "vikpelle",
+  "dependencies": {}
+}
