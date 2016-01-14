@@ -1,0 +1,57 @@
+// The Rails server imports this file via app/assets/stylesheets/application.css.scss
+// The webpack HMR dev server loads this file via client/bootstrap-sass.config.js
+
+// In either case, this file is loaded AFTER bootstrap has been loaded.
+// This is where you can add your own styles and override bootstrap styles
+// utilizing bootstrap variables and mixins.
+
+@import "_animations";
+@import "global/_defaults.css.scss";
+@import "global/_variables.scss";
+@import "blocks/homeWidget.scss";
+@import "blocks/categoryWidget.scss";
+@import "blocks/newShopWidget.scss";
+
+
+.navbar{
+	border-radius:0;
+}
+
+.navbar-black{
+	border-bottom: 1px solid #adadad;
+	//background-color: rgba(0,0,0,.75);
+}
+
+#welcome-page-guest {
+	background-image: url("background2.jpg");
+}
+
+.dropdown-menu{
+    margin-left: -220px;
+	min-width: 1348px;
+	left:100px;
+	padding-left:15px;
+}
+
+.dropdown-menu--purple {
+	box-shadow: none;
+    background-color: #6f5499;
+    border-radius:0px;
+}
+
+.dropdown-menu__item {
+	color: white;
+}
+
+.dropdown-menu__item:hover {
+	color: white;
+}
+
+.user-preferences__container {
+	height: 50px;
+    vertical-align: middle;
+}
+
+.user-preferences__link {
+	line-height: 50px;
+}

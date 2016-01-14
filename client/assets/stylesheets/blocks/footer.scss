@@ -1,0 +1,68 @@
+.app-footer {
+  background-color: $color3;
+  width:100%;
+
+}
+
+
+.app-footer__title {
+  color: $color1;
+  font-family: 'Oswald', sans-serif;
+}
+
+.app-footer__text {
+  color: $color1;
+}
+
+
+
+.app-footer__navigation {
+  li {
+    color: $color1;
+  }
+}
+
+.footer-brand {
+  .red {
+    color: $color5;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 4px;
+  }
+
+  .white {
+    color: $color1;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 4px;
+  }
+}
+
+.footer-row {
+  padding-top : 10px;
+  border-top: 2px solid rgba(255,255,255,0.4);
+}
+
+.footer-nav {
+  vertical-align:middle;
+  padding:5px;
+  span{
+    padding-right: 20px;
+    a {
+      font-family: 'Oswald', sans-serif;
+      color: $color4;
+      font-size: 18px;
+      text-decoration: none;
+    }
+    a:hover {
+      border-bottom: 1px solid $color5;
+    }
+  }
+}
+
+.footer-copyr {
+  padding-top: 7px;
+  p {
+    color: $color1;
+    font-size: 8px;
+    font-family: 'Oswald', sans-serif;
+  }
+}

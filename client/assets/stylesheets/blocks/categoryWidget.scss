@@ -1,0 +1,37 @@
+.mainCategory__image {
+	height: 90px;
+	width: auto;
+}
+
+.categoryBar__container {
+	border-top: 1px solid rgba(33,33,33,0.4);
+	border-bottom: 1px solid rgba(33,33,33,0.4);
+}
+
+.categoryBar__elem {
+	display: inline-block;
+    vertical-align: middle;
+	border-bottom: 2px solid transparent;
+	color: rgba(15,15,15,0.5);
+
+}
+
+.categoryBar__elem:hover {
+	border-bottom: 2px solid rgb(237, 41, 57);
+	color: rgba(0,0,0,0.7);	
+}
+
+.subCategory__list {
+	list-style-type: none;
+    color: rgba(15, 15, 15, 0.5);
+}
+
+.subCategory__list > li {
+	background-color: white;
+	padding: 4px;
+}
+
+.subCategory__list > li:hover {
+	background-color: #337ab7;
+	color: white;
+}

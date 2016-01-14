@@ -1,0 +1,11 @@
+.animate1 {
+ width:0;
+ height:0;
+	transition: transform 0.8s linear;
+ transform: scale(0, 0);
+}
+.zap {
+ width:auto;
+ height:auto;
+	transform: scale(1, 1);
+}

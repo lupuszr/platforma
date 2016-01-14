@@ -1,0 +1,174 @@
+.section-1 {
+  background-color: $color1;
+
+  p {
+    font-size: 35px;
+    color: $color4;
+    letter-spacing: -1px;
+    font-family: 'Oswald', sans-serif;
+  }
+  .technology {
+    letter-spacing: -2px;
+    font-size: 30px;
+  }
+  background-position: 50% 0px;
+}
+
+.section-2 {
+  margin-left: -15px;
+  margin-right: -15px;
+  .row {
+    margin: 0;
+  }
+  border-top: 1px solid white;
+  //border-bottom: 1px solid white;
+  background-color: $color5;
+
+  .h3 {
+    color: $color1;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .orange-background {
+    background-color: $color5;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  hr {
+    margin-top:-16px;
+  }
+
+  .h1 {
+    color: $color1;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+  }
+
+  p {
+    color: $color1;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.47rem;
+  }
+
+}
+
+.section-3 {
+  //border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  background-color: $color3;
+
+  .h2 {
+    color: $color1;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .h1 {
+    color: $color2;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  p {
+    color: $color1;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.47rem;
+  }
+}
+
+.section-4 {
+  //border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  background-color: $color3;
+
+  .h2 {
+    color: $color1;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .h1 {
+    color: $color2;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  p {
+    color: $color1;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.47rem;
+  }
+}
+
+.section-5 {
+  margin-left: -15px;
+  margin-right: -15px;
+  .row {
+    margin: 0;
+  }
+  border-top: 1px solid white;
+  //border-bottom: 1px solid white;
+  background-color: $color5;
+
+  .h3 {
+    color: $color1;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .orange-background {
+    background-color: $color5;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  hr {
+    margin-top:-16px;
+  }
+
+  .h1 {
+    color: $color1;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+  }
+
+  p {
+    color: $color1;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.47rem;
+  }
+
+}
+
+
+.inline-letter--gray {
+  color: $color4;
+  font-size: 150px;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.inline-letter--red {
+  color: $color5;
+  font-size: 150px;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.btn-standard {
+  border-radius:0px;
+  border-width:2px;
+  border-color: $color2;
+  color: $color2;
+  font-weight:bold;
+  opacity: 1;
+}
+
+.btn-standard:hover {
+  color: $color1;
+  background-color: $color2;
+}
+
+.negative-top-margin {
+  margin-top: -45px;
+}
+
+#ip_0 {
+  margin: 0 auto;
+}

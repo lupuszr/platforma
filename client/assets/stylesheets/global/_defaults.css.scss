@@ -1,0 +1,412 @@
+/*
+ * This file contains our css classes for padding / margin / centering etc.
+ */
+
+.no-margin{
+  margin:0 !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
+  margin-top:0 !important;
+  margin-bottom:0 !important;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.no-padding-top {
+    padding-top: 0 !important;
+}
+
+.no-padding-right {
+    padding-right: 0 !important;
+}
+
+.no-padding-left {
+    padding-left: 0 !important;
+}
+
+.no-padding-bottom {
+    padding-bottom: 0 !important;
+}
+
+.no-margin-left {
+    margin-left: 0 !important;
+}
+
+.no-margin-right {
+    margin-right: 0 !important;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+.no-margin-top {
+    margin-top: 0 !important;
+}
+
+// --------- padding regular ----------
+
+.padding-tiny {
+  padding: 5px;
+}
+
+.padding-small {
+  padding: 10px;
+}
+
+.padding-medium {
+  padding: 15px !important;
+}
+
+.padding-large {
+  padding: 25px !important;
+}
+
+.padding-xlarge {
+  padding: 40px !important;
+}
+
+// --------- padding top ----------
+
+.padding-top-xsmall {
+  padding-top: 5px;
+}
+
+.padding-top-small {
+  padding-top: 10px !important;
+}
+
+.padding-top-medium {
+  padding-top: 15px;
+}
+
+.padding-top-large {
+  padding-top: 25px
+}
+
+.padding-top-xlarge {
+  padding-top: 40px
+}
+
+// --------- padding bottom ----------
+
+.padding-bottom-tiny {
+  padding-bottom: 5px;
+}
+
+.padding-bottom-small {
+  padding-bottom: 10px;
+}
+
+.padding-bottom-medium {
+  padding-bottom: 15px;
+}
+
+.padding-bottom-large {
+  padding-bottom: 25px
+}
+
+.padding-bottom-xlarge {
+  padding-bottom: 40px
+}
+
+.padding-bottom-xxlarge {
+  padding-bottom: 60px
+}
+
+// --------- padding left ----------
+.padding-right-tiny {
+  padding-right: 5px !important;
+}
+
+.padding-left-small {
+  padding-left: 10px !important;
+}
+
+.padding-left-medium {
+  padding-left: 15px !important;
+}
+
+.padding-left-large {
+  padding-left: 25px !important;
+}
+
+.padding-left-xlarge {
+  padding-left: 40px !important;
+}
+
+// --------- padding right ----------
+
+.padding-right-small {
+  padding-right: 10px !important;
+}
+
+.padding-right-medium {
+  padding-right: 15px !important;
+}
+
+.padding-right-large {
+  padding-right: 25px !important;
+}
+
+.padding-right-xlarge {
+  padding-right: 40px !important;
+}
+
+// --------- padding left/right ----------
+
+.padding-left-right-small {
+  padding: 0px 10px !important;
+}
+
+// ------------ margin ----------------
+
+.margin-tiny {
+  margin: 5px;
+}
+
+.margin-small {
+  margin: 10px;
+}
+
+
+.margin-medium {
+  margin: 15px;
+}
+
+
+// ------------ margin top ------------
+
+.margin-top-tiny {
+  margin-top: 5px;
+}
+
+.margin-top-small {
+  margin-top: 10px;
+}
+
+.margin-top-medium {
+  margin-top: 15px !important;
+}
+
+.margin-top-large {
+    margin-top: 25px !important;
+}
+
+.margin-top-xlarge {
+  margin-top: 40px !important;
+}
+
+.margin-top-80 {
+  margin-top: 80px;
+}
+
+.margin-top-115 {
+  margin-top: 115px;
+}
+
+
+// --------- margin bottom ----------
+
+.margin-bottom-tiny {
+  margin-bottom: 5px;
+}
+
+.margin-bottom-small {
+  margin-bottom: 10px;
+}
+
+.margin-bottom-medium {
+  margin-bottom: 15px !important;
+}
+
+.margin-bottom-large {
+  margin-bottom: 20px !important;
+}
+
+.margin-bottom-xlarge {
+  margin-bottom: 40px !important;
+}
+
+.margin-bottom-xxlarge {
+  margin-bottom: 100px !important;
+}
+
+
+// ------------ margin left ------------
+
+.margin-left-tiny {
+  margin-left: 5px !important;
+}
+
+.margin-left-medium {
+  margin-left: 15px !important;
+}
+
+.margin-left-large {
+  margin-left: 25px !important;
+}
+
+// ------------ margin right ------------
+
+.margin-right-tiny {
+  margin-right: 5px !important;
+}
+
+.margin-right-medium {
+  margin-right: 15px !important;
+}
+
+.margin-right-large {
+  margin-right: 25px !important;
+}
+
+.margin-right-xlarge {
+  margin-right: 40px !important;
+}
+
+//-------------margin left-right-------------
+
+.margin-x-small {
+  margin-right: 10px !important;
+  margin-left: 10px !important;
+}
+
+.margin-x-medium {
+  margin-right: 15px !important;
+  margin-left: 15px !important;
+}
+
+.margin-x-large {
+  margin-right: 25px !important;
+  margin-left: 25px !important;
+}
+
+.margin-x-xlarge {
+  margin-right: 40px !important;
+  margin-left: 40px !important;
+}
+
+//-------------margin top-bottom---------
+
+.margin-y-small {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.margin-y-medium {
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+}
+
+.margin-y-large {
+  margin-top: 25px !important;
+  margin-bottom: 25px !important;
+}
+
+.margin-y-xlarge {
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+}
+
+// -------------- align --------------
+
+.center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+
+
+
+// -------------- fonts ------------
+
+
+.font-small {
+  font-size: 0.8em;
+}
+
+.font-bit-smaller {
+  font-size: 0.9em;
+}
+
+.font-large {
+  font-size: 1rem;
+}
+
+.font-xlarge {
+  font-size: 1.1rem;
+}
+
+.font-xxlarge {
+  font-size: 1.8rem;
+}
+.weight-bold {
+  font-weight: bold;
+}
+
+// -------------- opacity ------------
+
+.opacity-six {
+    opacity: .6;
+}
+
+.no-opacity {
+    opacity: 1;
+}
+
+p {
+  line-height: 1.2rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.no-float {
+  float: none !important;
+}
+
+.move-left {
+  float: left;
+}
+
+.move-right {
+  float: right;
+}
+//*------------- dissable browser inner focus --------------
+
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+
+
+//-------------- row and col centering
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}

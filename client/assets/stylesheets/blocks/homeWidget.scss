@@ -1,0 +1,27 @@
+.homeWidget {
+	background-image: url("background2.jpg");
+  background-size: 100% auto;
+  // background-position-y: -345px;
+  background-position-y: -400px;
+  // height: 325px;
+  height: 400px;
+  background-repeat: no-repeat;
+}
+
+.search-results {
+  background-color:rgba(255,255,255,0.8)
+}
+
+.search-results__list {
+  list-style-type: none;
+}
+
+.search-bar {
+	background-color: rgba(255,255,255,0.7);
+	border-right: none;
+}
+
+.search-bar__button {
+	background-color: rgba(255,255,255,0.7);
+	border-left: none;
+}
