@@ -1,7 +1,7 @@
 class CreateArticles < ActiveRecord::Migration
   def change
     create_table :articles do |t|
-      t.float :price
+      t.monetize :price
       t.string :name
       t.text :description
 

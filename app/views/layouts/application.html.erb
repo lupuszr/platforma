@@ -25,25 +25,32 @@
       <ul class="nav navbar-nav">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu dropdown-menu--purple">
             <ul class="list-inline">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Categories</a></li>
-              <li><a href="#">Pages</a></li>
-              <li><a href="#">Wish List</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a class="dropdown-menu__item" href="#">Home</a></li>
+              <li><a class="dropdown-menu__item" href="#">Blog</a></li>
+              <li><a class="dropdown-menu__item" href="#">Categories</a></li>
+              <li><a class="dropdown-menu__item" href="#">Pages</a></li>
+              <li><a class="dropdown-menu__item" href="#">Wish List</a></li>
+              <li><a class="dropdown-menu__item" href="#">FAQ</a></li>
+              <li><a class="dropdown-menu__item" href="#">Contact</a></li>
             </ul>
           </ul>
         </li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Log In</a></li>
-        <li role="separator" class="divider"></li>
-        <li><a href="#">Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-      </ul>
+
+      <% if current_user %>
+        <ul class="nav navbar-nav navbar-right user-preferences__container">  
+          <li class="user-preferences__link"><%= current_user.email %><li>
+        </ul>  
+      <% else %>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Log In</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+        </ul>
+      <% end %>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

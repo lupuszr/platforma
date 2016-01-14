@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Shop1
+  language: en
+  country: srb
+  logo_url: none
+  hover_url: none
+  user_id: 1 
+
+two:
+  name: Shop2
+  language: hu
+  country: hun
+  logo_url: none
+  hover_url: none
+  user_id: 2 

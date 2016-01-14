@@ -1,6 +1,21 @@
 Rails.application.routes.draw do
+  devise_for :users, path: '', controllers: {sessions: 'sessions', registrations: 'registrations'}, path_names: { sign_in: 'login', password: 'forgot', confirmation: 'confirm', unlock: 'unblock', registration: 'register', sign_up: 'new', sign_out: 'logout'}
+
   get '/', to: 'home#index'
   get '/findarticle', to: 'home#find_article'
+  resources :shop do
+    resources :article
+    collection do
+      get 'available'
+    end
+  end
+
+  scope '/shop/article' do
+    get 'get_categories', to: 'article#get_categories'
+    get 'get_sub_categories', to: 'article#get_sub_categories'
+    post 'upload_images', to: 'article#upload_images'
+  end
+  
   #get 'hello_world', to: 'hello_world#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

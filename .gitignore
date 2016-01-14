@@ -21,3 +21,7 @@ node_modules
 
 # Generated js bundles
 /app/assets/javascripts/generated/*
+/coverage
+
+# Ignore Rubocap 
+/.robo

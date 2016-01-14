@@ -83,3 +83,10 @@ Category.create([
 	{ name: "Marmelade", description: "test", main_category_id: food.id},
 
 ])
+
+Category.create([
+	{ name: "Accessories1", description: "test", main_category_id: clothing.id, category_id: clothing.categories.find_by_name('Accessories').id},
+	{ name: "Accessories2", description: "test", main_category_id: clothing.id, category_id: clothing.categories.find_by_name('Accessories').id},
+	{ name: "Accessories3", description: "test", main_category_id: clothing.id, category_id: clothing.categories.find_by_name('Accessories').id},
+	{ name: "Accessories4", description: "test", main_category_id: clothing.id, category_id: clothing.categories.find_by_name('Accessories').id},	
+])

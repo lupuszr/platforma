@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+main_cat_one:
+  id: 1
   name: MyString
   description: MyText
   img_url: MyString
 
-two:
+main_cat_two:
+  id: 2
   name: MyString
   description: MyText
   img_url: MyString

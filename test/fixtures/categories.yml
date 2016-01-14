@@ -1,9 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: 
+  name: FirstCategory
   description: MyText
+  main_category: main_cat_one
 
 two:
-  name: 
+  name: SecondCategory
   description: MyText

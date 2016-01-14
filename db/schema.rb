@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160105153856) do
+ActiveRecord::Schema.define(version: 20160113140258) do
 
   create_table "articles", force: :cascade do |t|
     t.float    "price"
@@ -19,7 +19,11 @@ ActiveRecord::Schema.define(version: 20160105153856) do
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "shop_id"
+    t.string   "img_url"
   end
+
+  add_index "articles", ["shop_id"], name: "index_articles_on_shop_id"
 
   create_table "articles_categories", id: false, force: :cascade do |t|
     t.integer "category_id"
@@ -36,8 +40,10 @@ ActiveRecord::Schema.define(version: 20160105153856) do
     t.datetime "updated_at",       null: false
     t.integer  "main_category_id"
     t.string   "img_url"
+    t.integer  "category_id"
   end
 
+  add_index "categories", ["category_id"], name: "index_categories_on_category_id"
   add_index "categories", ["main_category_id"], name: "index_categories_on_main_category_id"
 
   create_table "main_categories", force: :cascade do |t|
@@ -47,6 +53,20 @@ ActiveRecord::Schema.define(version: 20160105153856) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  create_table "shops", force: :cascade do |t|
+    t.string   "name"
+    t.string   "language"
+    t.string   "country"
+    t.string   "logo_url"
+    t.string   "hover_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.string   "currency"
+  end
+
+  add_index "shops", ["user_id"], name: "index_shops_on_user_id"
 
   create_table "trigrams", force: :cascade do |t|
     t.string  "trigram",     limit: 3
@@ -58,5 +78,25 @@ ActiveRecord::Schema.define(version: 20160105153856) do
 
   add_index "trigrams", ["owner_id", "owner_type", "fuzzy_field", "trigram", "score"], name: "index_for_match"
   add_index "trigrams", ["owner_id", "owner_type"], name: "index_by_owner"
+
+  create_table "users", force: :cascade do |t|
+    t.string   "surname"
+    t.string   "forename"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end

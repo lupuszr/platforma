@@ -13,7 +13,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shakacode/react-webpack-rails-tutorial.git"
   },
   "keywords": [
     "react",
