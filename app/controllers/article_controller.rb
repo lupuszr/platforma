@@ -1,7 +1,7 @@
 class ArticleController < ApplicationController
 
   before_action :authenticate_user!, :except => [:show, :index]
-  before_action :shop_owner, :except => [:show, :index, :upload_images]
+  before_action :shop_owner, :except => [:show, :index, :upload_images, :get_categories, :get_sub_categories]
 
   def new
   end
