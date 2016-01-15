@@ -31,6 +31,8 @@ module.exports = {
     extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx', '.scss', '.css', 'config.js'],
     alias: {
       lib: path.join(process.cwd(), 'app', 'lib'),
+      react: path.resolve('./node_modules/react'),
+      'react-dom': path.resolve('./node_modules/react-dom'),
     },
   },
   plugins: [
@@ -59,8 +61,6 @@ module.exports = {
     loaders: [
 
       // React is necessary for the client rendering:
-      {test: require.resolve('react'), loader: 'expose?React'},
-      {test: require.resolve('react-dom'), loader: 'expose?ReactDOM'},
       {test: require.resolve('jquery'), loader: 'expose?jQuery'},
       {test: require.resolve('jquery'), loader: 'expose?$'},
     ],

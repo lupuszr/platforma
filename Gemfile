@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem "react_on_rails"
+gem "react_on_rails", '>= 2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record

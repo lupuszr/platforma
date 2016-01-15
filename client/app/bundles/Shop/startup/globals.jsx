@@ -1,4 +1,8 @@
 import ShopApp from './ShopApp';
+import ReactOnRails from 'react-on-rails';
 
-// This is how react_on_rails can see the HelloWorldApp in the browser.
-window.ShopApp = ShopApp;
+ReactOnRails.register(
+  {
+    ShopApp
+  }
+);

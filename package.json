@@ -1,5 +1,5 @@
 {
-  "name": "Platforma+",
+  "name": "Platforma",
   "version": "0.0.1",
   "description": "A multi vendor app. Built using the react_on_rails generator.",
   "main": "server.js",
@@ -12,7 +12,7 @@
     "test": "rspec && (cd client && npm run lint)"
   },
   "repository": {
-    "type": "git",
+    "type": "git"
   },
   "keywords": [
     "react",
