@@ -6,9 +6,10 @@
 #
 default: &default
   adapter: postgresql
+  encoding: unicode
   pool: 5
-  timeout: 5000
   host: localhost
+  port: 5432 
 
 development:
   <<: *default
@@ -19,7 +20,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/tplatforma_est
+  database: db/tplatforma_test
 
 production:
   <<: *default
