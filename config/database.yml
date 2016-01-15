@@ -9,12 +9,12 @@ default: &default
   encoding: unicode
   pool: 5
   host: localhost
-  username:
-  password:
   port: 5432 
 
 development:
   <<: *default
+  username: <%= ENV["PQ_USER"] %>
+  password:	<%= ENV["PQ_PASS"] %>
   database: db/platforma_development
 
 # Warning: The database defined as "test" will be erased and
@@ -22,8 +22,12 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  username: <%= ENV["PQ_USER"] %>
+  password: <%= ENV["PQ_PASS"] %>
   database: db/tplatforma_test
 
 production:
   <<: *default
+  username:
+  password:
   database: platforma_production

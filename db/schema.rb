@@ -13,25 +13,29 @@
 
 ActiveRecord::Schema.define(version: 20160113140258) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "articles", force: :cascade do |t|
-    t.float    "price"
+    t.integer  "price_cents",    default: 0,     null: false
+    t.string   "price_currency", default: "USD", null: false
     t.string   "name"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.integer  "shop_id"
     t.string   "img_url"
   end
 
-  add_index "articles", ["shop_id"], name: "index_articles_on_shop_id"
+  add_index "articles", ["shop_id"], name: "index_articles_on_shop_id", using: :btree
 
   create_table "articles_categories", id: false, force: :cascade do |t|
     t.integer "category_id"
     t.integer "article_id"
   end
 
-  add_index "articles_categories", ["article_id"], name: "index_articles_categories_on_article_id"
-  add_index "articles_categories", ["category_id"], name: "index_articles_categories_on_category_id"
+  add_index "articles_categories", ["article_id"], name: "index_articles_categories_on_article_id", using: :btree
+  add_index "articles_categories", ["category_id"], name: "index_articles_categories_on_category_id", using: :btree
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -43,8 +47,8 @@ ActiveRecord::Schema.define(version: 20160113140258) do
     t.integer  "category_id"
   end
 
-  add_index "categories", ["category_id"], name: "index_categories_on_category_id"
-  add_index "categories", ["main_category_id"], name: "index_categories_on_main_category_id"
+  add_index "categories", ["category_id"], name: "index_categories_on_category_id", using: :btree
+  add_index "categories", ["main_category_id"], name: "index_categories_on_main_category_id", using: :btree
 
   create_table "main_categories", force: :cascade do |t|
     t.string   "name"
@@ -66,7 +70,7 @@ ActiveRecord::Schema.define(version: 20160113140258) do
     t.string   "currency"
   end
 
-  add_index "shops", ["user_id"], name: "index_shops_on_user_id"
+  add_index "shops", ["user_id"], name: "index_shops_on_user_id", using: :btree
 
   create_table "trigrams", force: :cascade do |t|
     t.string  "trigram",     limit: 3
@@ -76,8 +80,8 @@ ActiveRecord::Schema.define(version: 20160113140258) do
     t.string  "fuzzy_field"
   end
 
-  add_index "trigrams", ["owner_id", "owner_type", "fuzzy_field", "trigram", "score"], name: "index_for_match"
-  add_index "trigrams", ["owner_id", "owner_type"], name: "index_by_owner"
+  add_index "trigrams", ["owner_id", "owner_type", "fuzzy_field", "trigram", "score"], name: "index_for_match", using: :btree
+  add_index "trigrams", ["owner_id", "owner_type"], name: "index_by_owner", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "surname"
@@ -96,7 +100,11 @@ ActiveRecord::Schema.define(version: 20160113140258) do
     t.string   "last_sign_in_ip"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "articles", "shops"
+  add_foreign_key "categories", "categories"
+  add_foreign_key "categories", "main_categories"
+  add_foreign_key "shops", "users"
 end
