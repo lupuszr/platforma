@@ -9,6 +9,8 @@ default: &default
   encoding: unicode
   pool: 5
   host: localhost
+  username:
+  password:
   port: 5432 
 
 development:
