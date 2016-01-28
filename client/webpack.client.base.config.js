@@ -24,7 +24,8 @@ module.exports = {
     // This will contain the app entry points defined by webpack.hot.config and webpack.rails.config
     app: [
       './app/bundles/Home/startup/globals',
-      './app/bundles/Shop/startup/globals',
+      './app/bundles/NewShop/startup/globals',
+      './app/bundles/ViewShop/startup/globals'
     ],
   },
   resolve: {

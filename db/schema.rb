@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160113140258) do
+ActiveRecord::Schema.define(version: 20160122180048) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,7 +24,11 @@ ActiveRecord::Schema.define(version: 20160113140258) do
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
     t.integer  "shop_id"
-    t.string   "img_url"
+    t.string   "img_0"
+    t.string   "img_1"
+    t.string   "img_2"
+    t.string   "img_3"
+    t.string   "img_4"
   end
 
   add_index "articles", ["shop_id"], name: "index_articles_on_shop_id", using: :btree
@@ -62,14 +66,16 @@ ActiveRecord::Schema.define(version: 20160113140258) do
     t.string   "name"
     t.string   "language"
     t.string   "country"
-    t.string   "logo_url"
-    t.string   "hover_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "logo"
+    t.string   "banner"
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.integer  "user_id"
     t.string   "currency"
+    t.boolean  "creation_completed", default: false
   end
 
+  add_index "shops", ["name"], name: "index_shops_on_name", unique: true, using: :btree
   add_index "shops", ["user_id"], name: "index_shops_on_user_id", using: :btree
 
   create_table "trigrams", force: :cascade do |t|

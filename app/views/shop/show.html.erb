@@ -1,1 +1,5 @@
-<%= @shop.name%>
+<%= react_component("ViewShopApp",
+                     @shop_props,
+                     generator_function: false,
+                     prerender: false,
+                     trace: true) %>

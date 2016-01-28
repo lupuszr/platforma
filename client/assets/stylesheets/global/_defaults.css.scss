@@ -117,8 +117,8 @@
 }
 
 // --------- padding left ----------
-.padding-right-tiny {
-  padding-right: 5px !important;
+.padding-left-tiny {
+  padding-left: 5px !important;
 }
 
 .padding-left-small {
@@ -138,6 +138,9 @@
 }
 
 // --------- padding right ----------
+.padding-right-tiny {
+  padding-right: 5px !important;
+}
 
 .padding-right-small {
   padding-right: 10px !important;
@@ -289,6 +292,11 @@
   margin-left: 40px !important;
 }
 
+.margin-x-180 {
+  margin-right: 180px !important;
+  margin-left: 180px !important; 
+}
+
 //-------------margin top-bottom---------
 
 .margin-y-small {
@@ -409,4 +417,12 @@ p {
 .vertical-align {
     display: flex;
     align-items: center;
+}
+
+.truncate {
+  white-space: nowrap;
+  width: 100%;                   /* IE6 needs any width */
+  overflow: hidden;              /* "overflow" value must be different from  visible"*/ 
+  -o-text-overflow: ellipsis;    /* Opera < 11*/
+  text-overflow:    ellipsis; 
 }

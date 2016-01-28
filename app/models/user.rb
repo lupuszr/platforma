@@ -8,5 +8,4 @@ class User < ActiveRecord::Base
   validates :surname, presence: true
   validates :forename, presence: true
   validates :email, presence: true
-
 end

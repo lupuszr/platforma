@@ -1,50 +1,70 @@
 class ArticleController < ApplicationController
-
-  before_action :authenticate_user!, :except => [:show, :index]
-  before_action :shop_owner, :except => [:show, :index, :upload_images, :get_categories, :get_sub_categories]
+  before_action :authenticate_user!, except: [:show, :index]
+  before_action :shop_owner,
+                except: [:show, :index, :upload_images,
+                         :get_categories, :get_sub_categories]
 
   def new
   end
 
   def index
-    @article = Shop.find(params[:shop_id]).articles.all
+    @articles = Shop.find(params[:shop_id]).articles.all
   end
 
   def edit
+    @article = Article.find(params[:id])
+    render json: @article
   end
 
   def update
   end
 
   def create
-    @article = current_user.shop.articles.create(params.permit(:name, :language, :currency, :country, :logo_url, :hover_url, :user_id))
+    @article = current_user.shop.articles.create(create_params)
+    puts @article.errors.full_messages
+    render json: @article
   end
 
   def destroy
-  end 
+  end
 
   def show
-    @articles = Article.find(params[:id])
+    @article = Article.find(params[:id])
   end
 
-  def get_categories
-    render json: MainCategory.find(params[:main_category_id]).categories
+  def categories
+    render json: Category.top_categories(params[:main_category_id])
   end
 
-  def get_sub_categories
-    render json: Category.find(params[:category_id]).sub_categories
+  def sub_categories
+    render json: Category.sub_categories(params[:category_id])
   end
 
-  def upload_images
-    name = params[:file].original_filename
+  # def upload_images
     
-    #TODO cloudinary
-    # directory_name = "public/uploads/" + params[:article_name]
-    # Dir.mkdir(directory_name) unless File.exists?(directory_name)
+  #   current_user.shop.logo_url = params[:file]
 
-    directory = "public"
-    path = File.join(directory, name)
-    File.open(path, "wb") { |f| f.write(params[:file].read) }
-    render json: "ok"
+  #   # directory = 'public'
+  #   # puts 'test'
+  #   # params.require(:files).require(:images).map{ |file|
+  #   #   puts file
+  #   #   puts file.attributes
+  #   #   path = File.join(directory, name)
+  #   #   File.open(path, 'wb') { |f| f.write(params[:file].read) }
+  #   # }
+  #   render json: 'ok'
+  # end
+
+  protected
+
+  def create_params
+    #ActionController::Parameters.new(shop_id: current_user.shop.id)
+    #  .merge(params)
+      params.permit(
+        :name, :description, :price_cents,
+        :category_id, :sub_category_id,
+        :img_0, :img_1, :img_2, :img_3, :img_4,
+        :user_id
+      )
   end
 end

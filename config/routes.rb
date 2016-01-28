@@ -1,5 +1,20 @@
 Rails.application.routes.draw do
-  devise_for :users, path: '', controllers: {sessions: 'sessions', registrations: 'registrations'}, path_names: { sign_in: 'login', password: 'forgot', confirmation: 'confirm', unlock: 'unblock', registration: 'register', sign_up: 'new', sign_out: 'logout'}
+  devise_for :users, path: '',
+                     controllers:
+                     {
+                       sessions: 'sessions',
+                       registrations: 'registrations'
+                     },
+                     path_names:
+                     {
+                       sign_in: 'login',
+                       password: 'forgot',
+                       confirmation: 'confirm',
+                       unlock: 'unblock',
+                       registration: 'register',
+                       sign_up: 'new',
+                       sign_out: 'logout'
+                     }
 
   get '/', to: 'home#index'
   get '/findarticle', to: 'home#find_article'
@@ -7,12 +22,13 @@ Rails.application.routes.draw do
     resources :article
     collection do
       get 'available'
+      post 'article', to: 'article#create'
     end
   end
 
   scope '/shop/article' do
-    get 'get_categories', to: 'article#get_categories'
-    get 'get_sub_categories', to: 'article#get_sub_categories'
+    get 'get_categories', to: 'article#categories'
+    get 'get_sub_categories', to: 'article#sub_categories'
     post 'upload_images', to: 'article#upload_images'
   end
   

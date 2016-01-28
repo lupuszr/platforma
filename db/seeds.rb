@@ -5,13 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-clothing 	= MainCategory.create( name: "Clothing & Accessories", description: "description", img_url: "clothing.jpg" )
-jewelry 	= MainCategory.create( name: "Jewelry", description: "description", img_url: "jewelry.jpg" )
+clothing 		= MainCategory.create( name: "Clothing & Accessories", description: "description", img_url: "clothing.jpg" )
+jewelry 		= MainCategory.create( name: "Jewelry", description: "description", img_url: "jewelry.jpg" )
 home 			= MainCategory.create( name: "Home", description: "description", img_url: "home.jpg" )
-living 		= MainCategory.create( name: "Living", description: "description", img_url: "living.jpg" )
+living 			= MainCategory.create( name: "Living", description: "description", img_url: "living.jpg" )
 kids 			= MainCategory.create( name: "Kids & Babies", description: "description", img_url: "kids.jpg" )
-digital 	= MainCategory.create( name: "Digital", description: "description", img_url: "digital.jpg" )
-services 	= MainCategory.create( name: "Services", description: "description", img_url: "services.jpg" )
+digital 		= MainCategory.create( name: "Digital", description: "description", img_url: "digital.jpg" )
+services 		= MainCategory.create( name: "Services", description: "description", img_url: "services.jpg" )
 food 			= MainCategory.create( name: "Food", description: "description", img_url: "food.jpg" )
 
 Category.create([

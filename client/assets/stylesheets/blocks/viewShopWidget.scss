@@ -1,0 +1,36 @@
+.banner__image {
+  height: 200px;
+  width: 850px;
+}
+
+.banner__container {
+  position: absolute;
+  left: 260px;
+  top: 75px;
+  z-index: 1;
+  width: 800px;
+}
+
+.logo__image {
+  
+}
+
+.shop__name {
+  text-align: left;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: white;
+  margin-top: 100px;
+  margin-left: -30px;
+}
+
+.article__container {
+  padding: 5px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.2);
+  height: 250px;
+  margin: 5px;
+}
+
+.article__image {
+  margin: 0 auto;
+}
