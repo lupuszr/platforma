@@ -20,7 +20,7 @@ class ArticleController < ApplicationController
   end
 
   def create
-    @article = current_user.shop.articles.create(create_params)
+    @article = current_user.shop.articles.create_with_categories(create_params)
     puts @article.errors.full_messages
     render json: @article
   end
@@ -39,21 +39,6 @@ class ArticleController < ApplicationController
   def sub_categories
     render json: Category.sub_categories(params[:category_id])
   end
-
-  # def upload_images
-    
-  #   current_user.shop.logo_url = params[:file]
-
-  #   # directory = 'public'
-  #   # puts 'test'
-  #   # params.require(:files).require(:images).map{ |file|
-  #   #   puts file
-  #   #   puts file.attributes
-  #   #   path = File.join(directory, name)
-  #   #   File.open(path, 'wb') { |f| f.write(params[:file].read) }
-  #   # }
-  #   render json: 'ok'
-  # end
 
   protected
 

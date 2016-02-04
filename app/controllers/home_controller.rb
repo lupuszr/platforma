@@ -10,11 +10,13 @@ class HomeController < ApplicationController
 
   #TODO handle when there is no article
   def find_article
-  	@articles = Article.find_by_fuzzy_name(params[:content]).take(5)
+    @articles = Article.fuzzy_search(params[:content]).filter(filtering_params).limit(5)
   	render json: @articles
   end
 
-  #TODO attila implement
-  # def find_article_by_category
-  # end
+  private
+
+  def filtering_params
+    params.slice(:min_price, :max_price)
+  end
 end
